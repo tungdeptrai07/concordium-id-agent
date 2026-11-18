@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VeriPulse — Concordium Trusted AI Agent (CIS-8004 &amp; x402)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">C</div>
+      <div>
+        <h1>VeriPulse Trusted Agent</h1>
+        <p class="subtitle">Concordium Testnet · CIS-8004 Verified Badge · x402 Sponsored Payments · EU AI Act Art. 12</p>
+      </div>
+    </div>
+    <div class="pills">
+      <span id="badgePill" class="pill ok">Verified by Concordium (CIS-8004 #9412)</span>
+      <span id="integrityPill" class="pill">Art. 12 Hash Chain: VALID</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid-two">
+      <article class="card">
+        <h2>1. Concordium Verify &amp; Access (ZK Identity Proof) + x402 Task</h2>
+        <div class="form-stack">
+          <label>
+            Concordium Credential ID (Zero PII Disclosed)
+            <input id="credInput" type="text" value="ccd-cred-98a7b6c5" />
+          </label>
+          <div class="row-two">
+            <label>
+              Agent Skill (`x402` Rate: 0.25 CCD Sponsored)
+              <select id="skillInput">
+                <option value="rwa-compliance-check">rwa-compliance-check</option>
+                <option value="cis8004-counterparty-audit">cis8004-counterparty-audit</option>
+                <option value="treasury-settlement-guard">treasury-settlement-guard</option>
+              </select>
+            </label>
+            <label>
+              Task Input Parameter
+              <input id="taskInput" type="text" value="Verify institutional RWA liquidity pool #402" />
+            </label>
+          </div>
+          <div class="btn-row">
+            <button id="verifyBtn" type="button" class="btn">Step 1: Verify ZK Attribute Proof</button>
+            <button id="execBtn" type="button" class="btn primary">Step 2: Settle x402 (Sponsored) &amp; Run Agent</button>
+          </div>
+          <div id="msgBox" class="msg-box" hidden></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>2. CIS-8004 Agent Registry Card (`agent-registry.concordium.com`)</h2>
+        <div id="cardBox" class="item-box"></div>
+      </article>
+    </section>
+
+    <section class="grid-two">
+      <article class="card">
+        <h2>3. x402 Sponsored CCD Settlements (`CCDExplorer Testnet`)</h2>
+        <div id="settlementsList" class="stack">
+          <div class="item-box muted">Verify ZK identity and execute an x402 skill to generate a sponsored Concordium testnet receipt.</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>4. EU AI Act Article 12 Tamper-Evident Audit Chain</h2>
+        <div id="auditList" class="stack">
+          <div class="item-box muted">Every identity check and x402 agent action is recorded in a SHA-256 hash chain.</div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
